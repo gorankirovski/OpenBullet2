@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -yq && apt-get install -y --no-install-recommends apt-utils
-RUN apt-get upgrade -yq && apt-get install -yq apt-utils curl git nano wget unzip python3 python3-pip
+# RUN apt-get upgrade -yq && apt-get install -yq apt-utils curl git nano wget unzip python3 python3-pip
 RUN curl -sL https://deb.nodesource.com/setup_current.x | bash - && apt-get install -yq nodejs build-essential
 RUN echo "deb http://deb.debian.org/debian/ unstable main contrib non-free" >> /etc/apt/sources.list.d/debian.list
 RUN apt-get update -yq && apt-get install -y --no-install-recommends firefox chromium
